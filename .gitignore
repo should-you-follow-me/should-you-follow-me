@@ -20,3 +20,5 @@
 
 # VIM
 *.swp
+
+vendor
