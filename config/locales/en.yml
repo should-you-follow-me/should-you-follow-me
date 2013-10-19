@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+
+  metrics:
+    bieber: 'Bieber fan'
+    astrophysics: 'Star gazer'
+    small_talk: 'Small talker'
