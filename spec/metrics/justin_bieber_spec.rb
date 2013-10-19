@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'justin_bieber_metric'
 
 describe 'Follows Justin Biebier' do
   describe '.run_metric' do
