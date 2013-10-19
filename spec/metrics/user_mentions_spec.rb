@@ -14,6 +14,6 @@ describe 'When mention someone which decreases your score' do
 
     results = Metrics::BieberUserMention.run tweets
 
-    expect(results).to eql({ 'bieber_user_mention' => -10 })
+    expect(results).to eql({ bieber: -10 })
   end
 end
