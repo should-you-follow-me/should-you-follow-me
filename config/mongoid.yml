@@ -1,3 +1,16 @@
+production:
+  sessions:
+    default:
+      database: should_you_follow_me_production
+      hosts:
+        - localhost:27017
+      options:
+        read: primary
+        # In the production environment we lower the retries and retry interval to
+        # low amounts for fast failures.
+        max_retries: 1
+        retry_interval: 0
+
 development:
   # Configure available database sessions. (required)
   sessions:
@@ -5,7 +18,7 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: should_i_follow_you_development
+      database: should_you_follow_me_development
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -65,7 +78,7 @@ development:
 test:
   sessions:
     default:
-      database: should_i_follow_you_test
+      database: should_you_follow_me_test
       hosts:
         - localhost:27017
       options:
