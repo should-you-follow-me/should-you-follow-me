@@ -11,8 +11,12 @@ describe 'Follows Justin Biebier' do
       expect(metric).to eql({ follows_justin_bieber: -5 })
     end
 
-    it '' do
+    it 'positivates when not follows' do
+      friends = ['SashaGrey']
+      tweets = []
+      metric = Metrics::FollowsJustinBieber.run(tweets, friends)
 
+      expect(metric).to eql({ follows_justin_bieber: 5 })
     end
   end
 end

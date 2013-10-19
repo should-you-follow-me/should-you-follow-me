@@ -4,7 +4,7 @@ module Metrics
       if friends.include?('justinbieber')
         { follows_justin_bieber: -5 }
       else
-        { follows_justin_bieber: 10 }
+        { follows_justin_bieber: 5 }
       end
     end
   end
