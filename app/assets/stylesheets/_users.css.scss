@@ -2,55 +2,118 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.user {
+#score-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
 
-  .profile {
-    // @include grid-column(12);
+  .good {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10%;
+    background: $green;
+    text-align: right;
+    padding: 1em;
+    padding-top: 8em;
+  }
+
+  .bad {
+    position: absolute;
+    top: 0;
+    right: 90%;
+    bottom: 0;
+    left: 0;
     background: $red;
     padding: 1em;
-  }
-
-  .picture {
-    @include border-radius(200px);
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .screen-name {
-    color: white;
-    text-align: center;
-  }
-
-  .should-be-followed {
-    font-size: 5em;
-    text-align: center;
-  }
-
-  .metrics {
-    @include grid-row;
-    li {
-      list-style-type: none;
-      font-size: 2em;
-      margin-bottom: $paragraph-margin-bottom;
-      font-weight: lighter;
-    }
-  }
-
-  .good-metrics {
-    @include grid-column(6);
-    text-align: right;
-  }
-
-  .bad-metrics {
-    @include grid-column(6);
-  }
-
-
-  .icon-stack-base { color: #338A99; }
-
-  .metrics {
-    @include icon-stack($width: 2em, $height: 2em, $top-font-size: 1em, $base-font-size: 2em);
+    padding-top: 8em;
+    overflow: visible;
   }
 }
+
+#content {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.search-bar {
+  background: #000;
+  color: #fff;
+  font-size: 3em;
+  padding: 0.25em;
+
+  input {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 1em;
+
+  }
+}
+
+
+#profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  width: 400px;
+  height: 250px;
+  margin-left: -200px;
+  margin-top: -125px;
+}
+
+.picture {
+  @include border-radius(200px);
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.screen-name {
+  color: white;
+  text-align: center;
+}
+
+.should-be-followed {
+  font-size: 5em;
+  text-align: center;
+}
+
+.metrics {
+  padding: 1em;
+
+  li {
+    list-style-type: none;
+    font-size: 2em;
+    margin-bottom: $paragraph-margin-bottom;
+    font-weight: lighter;
+    width: 500px;
+  }
+}
+
+.good-metrics {
+  float: right;
+  text-align: right;
+}
+
+.bad-metrics {
+}
+
+
+.icon-stack-base { color: #338A99; }
+
+.metrics {
+  @include icon-stack($width: 2em, $height: 2em, $top-font-size: 1em, $base-font-size: 2em);
+}
+

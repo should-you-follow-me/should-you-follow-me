@@ -1,6 +1,11 @@
-<div class="user">
+<div id="content">
+  <div class="search-bar">
+    <span class="twitter-at">@</span>
+    <input class="twitter-screen-name" placeholder="Twitter user name"></input>
+  </div>
 
-  <div class="profile">
+
+  <div id="profile">
     <img class="picture" src="<%= @user.twitter_picture_url %>">
     <h1 class="screen-name">@<%= @user.twitter_screen_name %></h1>
 
@@ -15,7 +20,6 @@
 
 <div class="metrics">
   <div class="good-metrics">
-    <h2>The good</h2>
     <ol>
       <% @user.good_metrics.each_pair do |key, value| %>
         <li>
@@ -31,7 +35,6 @@
 
 
   <div class="bad-metrics">
-    <h2>The bad</h2>
     <ol>
       <% @user.bad_metrics.each_pair do |key, value| %>
         <li>
@@ -47,4 +50,8 @@
 </div>
 
 
+</div>
+<div id="score-bg">
+  <div class="good"></div>
+  <div class="bad"></div>
 </div>
