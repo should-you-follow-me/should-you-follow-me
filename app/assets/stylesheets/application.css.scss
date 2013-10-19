@@ -12,9 +12,14 @@
 
 @import "compass";
 @import 'foundation_and_overrides';
+@import "font-awesome/font-awesome";
 
 @import "palette";
 @import "users";
+
+body {
+  background: #f5f5f5;
+}
 
 .result li { background: no-repeat center left; padding-left: 20px; list-style: none;}
 #bad-result h2, #good-result h2 { text-align: center; }

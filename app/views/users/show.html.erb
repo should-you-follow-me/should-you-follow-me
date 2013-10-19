@@ -18,7 +18,13 @@
     <h2>The good</h2>
     <ol>
       <% @user.good_metrics.each_pair do |key, value| %>
-        <li><%= t key, scope: 'metrics' %></li>
+        <li>
+          <%= t key, scope: 'metrics' %>
+          <span class="icon-stack">
+            <i class="icon-circle icon-stack-base"></i>
+            <i class="icon-star icon-light"></i>
+          </span>
+        </li>
       <% end %>
     </ol>
   </div>
@@ -28,7 +34,13 @@
     <h2>The bad</h2>
     <ol>
       <% @user.bad_metrics.each_pair do |key, value| %>
-        <li><%= t key, scope: 'metrics' %></li>
+        <li>
+          <span class="icon-stack">
+            <i class="icon-circle icon-stack-base"></i>
+            <i class="icon-star icon-light"></i>
+          </span>
+          <%= t key, scope: 'metrics' %>
+        </li>
       <% end %>
     </ol>
   </div>

@@ -30,7 +30,12 @@
 
   .metrics {
     @include grid-row;
-    li { list-style-type: none; }
+    li {
+      list-style-type: none;
+      font-size: 2em;
+      margin-bottom: $paragraph-margin-bottom;
+      font-weight: lighter;
+    }
   }
 
   .good-metrics {
@@ -40,5 +45,12 @@
 
   .bad-metrics {
     @include grid-column(6);
+  }
+
+
+  .icon-stack-base { color: #338A99; }
+
+  .metrics {
+    @include icon-stack($width: 2em, $height: 2em, $top-font-size: 1em, $base-font-size: 2em);
   }
 }
