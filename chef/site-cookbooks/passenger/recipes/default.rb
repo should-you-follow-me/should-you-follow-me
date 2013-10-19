@@ -1,4 +1,3 @@
-package 'build-essential'
 package "libcurl4-openssl-dev"
 
 gem_package 'passenger'
