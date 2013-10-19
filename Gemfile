@@ -14,6 +14,7 @@ gem 'therubyracer'
 gem 'twitter'
 
 group :development, :test do
+  gem 'guard-rspec', require: false
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
