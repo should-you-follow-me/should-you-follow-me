@@ -11,6 +11,7 @@ gem 'zurb-foundation'
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 gem 'bson_ext'
 gem 'therubyracer'
+gem 'twitter'
 
 group :development, :test do
   gem 'capistrano'
