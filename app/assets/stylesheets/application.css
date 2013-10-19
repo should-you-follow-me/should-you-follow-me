@@ -12,3 +12,8 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
+
+.result li { background: no-repeat center left; padding-left: 20px; list-style: none;}
+#bad-result h2, #good-result h2 { text-align: center; }
+#bad-result ul li { background-image: url(/assets/bad1.png);  }
+#good-result ul li { background-image: url(/assets/good1.png);  }
