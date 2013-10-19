@@ -1,0 +1,44 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user {
+
+  .profile {
+    // @include grid-column(12);
+    background: $red;
+    padding: 1em;
+  }
+
+  .picture {
+    @include border-radius(200px);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .screen-name {
+    color: white;
+    text-align: center;
+  }
+
+  .should-be-followed {
+    font-size: 5em;
+    text-align: center;
+  }
+
+  .metrics {
+    @include grid-row;
+    li { list-style-type: none; }
+  }
+
+  .good-metrics {
+    @include grid-column(6);
+    text-align: right;
+  }
+
+  .bad-metrics {
+    @include grid-column(6);
+  }
+}

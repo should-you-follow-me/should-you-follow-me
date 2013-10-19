@@ -1,23 +1,38 @@
-<img src="<%= @user.twitter_picture_url %>">
-<h1 class="screen_name"><%= @user.twitter_screen_name %></h1>
+<div class="user">
 
-<% if @user.should_you_follow_me %>
-  <p class="should-be-followed">YES</p>
-<% else %>
-  <p class="should-not-be-followed">NO</p>
-<% end %>
+  <div class="profile">
+    <img class="picture" src="<%= @user.twitter_picture_url %>">
+    <h1 class="screen-name">@<%= @user.twitter_screen_name %></h1>
 
-<h2>The good</h2>
-<ol class="good-metrics">
-  <% @user.good_metrics.each_pair do |key, value| %>
-    <li><%= t key, scope: 'metrics' %></li>
+  </div>
+
+<!--   <% if @user.should_you_follow_me %>
+    <p class="should-be-followed">YES</p>
+  <% else %>
+    <p class="should-not-be-followed">NO</p>
   <% end %>
-</ol>
+ -->
+
+<div class="metrics">
+  <div class="good-metrics">
+    <h2>The good</h2>
+    <ol>
+      <% @user.good_metrics.each_pair do |key, value| %>
+        <li><%= t key, scope: 'metrics' %></li>
+      <% end %>
+    </ol>
+  </div>
 
 
-<h2>The bad</h2>
-<ol class="bad-metrics">
-  <% @user.bad_metrics.each_pair do |key, value| %>
-    <li><%= t key, scope: 'metrics' %></li>
-  <% end %>
-</ol>
+  <div class="bad-metrics">
+    <h2>The bad</h2>
+    <ol>
+      <% @user.bad_metrics.each_pair do |key, value| %>
+        <li><%= t key, scope: 'metrics' %></li>
+      <% end %>
+    </ol>
+  </div>
+</div>
+
+
+</div>
