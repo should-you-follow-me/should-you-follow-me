@@ -21,7 +21,7 @@
 # VIM
 *.swp
 
-vendor
+vendor/ruby
 
 # Mac
 .DS_Store
