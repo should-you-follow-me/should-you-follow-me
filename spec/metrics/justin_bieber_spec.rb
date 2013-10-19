@@ -4,17 +4,15 @@ require 'justin_bieber_metric'
 describe 'Follows Justin Biebier' do
   describe '.run_metric' do
     it 'negativates when follow him' do
-      friends = ['justinbieber']
-      tweets = []
-      metric = Metrics::FollowsJustinBieber.run(tweets, friends)
+      account = DataStructures::Account.new([], ['justinbieber'])
+      metric = Metrics::FollowsJustinBieber.run(account)
 
       expect(metric).to eql({ follows_justin_bieber: -5 })
     end
 
     it 'positivates when not follows' do
-      friends = ['SashaGrey']
-      tweets = []
-      metric = Metrics::FollowsJustinBieber.run(tweets, friends)
+      account = DataStructures::Account.new([], ['SashaGrey'], '')
+      metric = Metrics::FollowsJustinBieber.run(account)
 
       expect(metric).to eql({ follows_justin_bieber: 5 })
     end
