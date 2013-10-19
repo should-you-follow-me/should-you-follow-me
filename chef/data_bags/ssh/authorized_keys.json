@@ -1,0 +1,6 @@
+{
+  "id": "authorized_keys",
+  "keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDD9MKVUZSzoNcM34atuq3UF0aCfday5YEwt/Bkka/o9uK61UDoWg9W6d3DwzovcLJdYyyY2DbOzokT+tuWRuoC5lj+vID3w4/4Oqmiv9vtkRbB3j8sX/zw/i7Donmq6vUwZFNLnS9QHmNOGw2NFR2HKd1nir46PJRDkt0/1Ot23pp/KZAqArLf0jMhRds6BhQrrzCouqXAIbLehA9jRmm4WopJTQps6VjPOdnS+3/h27aWbAk2+erzMjN4RgziVouecMf6Z3eEQbfR7FxIVfJRbsqePSFEM/uPfSygK1lmzNOYBkWNK6tL6UkZeqCWp1htcBsuQ8RMY+7K7p01p+TD vagrant@precise64"
+  ]
+}

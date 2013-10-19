@@ -48,6 +48,18 @@ directory "/home/deploy/.ssh/" do
   recursive true
 end
 
+template "/home/deploy/.ssh/authorized_keys" do
+  source 'authorized_keys.erb'
+  owner "deploy"
+  group "deploy"
+  mode 0644
+
+  variables(
+    :keys => data_bag_item("ssh", "authorized_keys")["keys"]
+  )
+end
+
+
 directory "/www" do
   owner "deploy"
   group "deploy"
