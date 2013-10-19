@@ -13,6 +13,9 @@ gem 'bson_ext'
 gem 'therubyracer'
 
 group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
   gem 'rspec-rails'
   gem 'jasmine-rails'
   gem 'factory_girl'
