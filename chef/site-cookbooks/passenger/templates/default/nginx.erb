@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# nginx     Startup script for the nginx server
+#
+# description: Nginx Web Server
+#
+# processname: nginx
+#
+
+prog="nginx"
+nginx_bin="/opt/nginx/sbin/nginx"
+nginx_conf_file="/etc/nginx/nginx.conf"
+nginx_pid_file="/var/run/nginx.pid"
+
+start() {
+  echo "Starting $prog"
+  ulimit -n 200000
+  $nginx_bin -c $nginx_conf_file
+}
+
+stop() {
+  echo "Stopping $prog"
+  kill -QUIT $(cat $nginx_pid_file)
+}
+
+reload() {
+  echo "Reloading $prog"
+  kill -HUP $(cat $nginx_pid_file)
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  reload)
+    reload
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|reload}"
+esac

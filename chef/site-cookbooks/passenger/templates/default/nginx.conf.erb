@@ -1,0 +1,50 @@
+worker_processes  1;
+
+error_log /var/log/nginx.log debug;
+
+events {
+    worker_connections  1024;
+}
+
+pid /var/run/nginx.pid;
+
+http {
+        server_names_hash_bucket_size 64;
+        include       /opt/nginx/conf/mime.types;
+        default_type  application/octet-stream;
+
+        sendfile        on;
+
+        keepalive_timeout  65;
+
+        passenger_root /var/lib/gems/1.9.1/gems/passenger-4.0.20;
+        passenger_ruby /usr/bin/ruby1.9.1;
+
+        passenger_max_pool_size 2;
+
+        server {
+            listen       80;
+            server_name  www.shouldyoufollow.me;
+
+            return 301 http://shouldyoufollow.me$request_uri;
+
+            error_page   500 502 503 504  /50x.html;
+            location = /50x.html {
+                root   html;
+            }
+        }
+
+        server {
+            listen       80;
+            server_name  shouldyoufollow.me;
+
+            root /www/rocoh/current/public;
+
+            passenger_enabled on;
+
+            error_page   500 502 503 504  /50x.html;
+            location = /50x.html {
+                root   html;
+            }
+        }
+}

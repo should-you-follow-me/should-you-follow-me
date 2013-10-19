@@ -1,6 +1,8 @@
 {
   "run_list": [
     "recipe[environment]",
+    "recipe[ruby]",
+    "recipe[passenger]",
     "recipe[mongodb]"
   ]
 }
