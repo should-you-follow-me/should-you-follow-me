@@ -15,7 +15,7 @@ describe 'User mentions metrics' do
 
       results = Metrics::BieberUserMention.run tweets
       expect(results).to eql({ bieber: -10 })
-    end
+    end   
 
     it 'Should not return bieber metric score when not mentioned Justin Bieber' do
       tweets = [Twitter::Tweet.new(id: 1, entities: { user_mentions: [{ id: 1 }] })]
@@ -23,6 +23,7 @@ describe 'User mentions metrics' do
       results = Metrics::BieberUserMention.run tweets
       expect(results).to be_nil
     end   
+
   end
 
   context 'When mention someone which increases your score' do

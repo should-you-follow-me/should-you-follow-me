@@ -3,7 +3,7 @@ module Metrics
     USER_IDS = [222, 333, 444]
 
     def self.run tweets
-      has_mentioned = tweets.each.any? do |tweet| 
+      has_mentioned = tweets.any? do |tweet| 
         tweet.user_mentions.any? do |user_mention| 
           USER_IDS.include? user_mention.id
         end
