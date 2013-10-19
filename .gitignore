@@ -15,4 +15,8 @@
 /log/*.log
 /tmp
 
+# Vagrant
 .vagrant
+
+# VIM
+*.swp
