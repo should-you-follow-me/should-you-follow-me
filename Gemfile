@@ -7,7 +7,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'zurb-foundation'
-gem "compass-rails", "~> 2.0.alpha.0"
+gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'font-awesome-rails'
 
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 gem 'bson_ext'

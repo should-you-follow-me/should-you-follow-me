@@ -49,8 +49,4 @@
 
 
   .icon-stack-base { color: #338A99; }
-
-  .metrics {
-    @include icon-stack($width: 2em, $height: 2em, $top-font-size: 1em, $base-font-size: 2em);
-  }
 }

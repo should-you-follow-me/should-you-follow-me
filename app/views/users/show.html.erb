@@ -3,48 +3,40 @@
   <div class="profile">
     <img class="picture" src="<%= @user.twitter_picture_url %>">
     <h1 class="screen-name">@<%= @user.twitter_screen_name %></h1>
-
   </div>
 
-<!--   <% if @user.should_you_follow_me %>
-    <p class="should-be-followed">YES</p>
-  <% else %>
-    <p class="should-not-be-followed">NO</p>
-  <% end %>
- -->
+  <div class="metrics">
+    <div class="good-metrics">
+      <h2>The good</h2>
+      <ol>
+        <% @user.good_metrics.each_pair do |key, value| %>
+          <li>
+            <%= t key, scope: 'metrics' %>
+            <span class="icon-stack">
+              <i class="icon-circle icon-stack-base"></i>
+              <i class="icon-metric-<%= key %> icon-light"></i>
+            </span>
+          </li>
+        <% end %>
+      </ol>
+    </div>
 
-<div class="metrics">
-  <div class="good-metrics">
-    <h2>The good</h2>
-    <ol>
-      <% @user.good_metrics.each_pair do |key, value| %>
-        <li>
-          <%= t key, scope: 'metrics' %>
-          <span class="icon-stack">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-metric-<%= key %> icon-light"></i>
-          </span>
-        </li>
-      <% end %>
-    </ol>
+
+    <div class="bad-metrics">
+      <h2>The bad</h2>
+      <ol>
+        <% @user.bad_metrics.each_pair do |key, value| %>
+          <li>
+            <span class="icon-stack">
+              <i class="icon-circle icon-stack-base"></i>
+              <i class="icon-metric-<%= key %> icon-light"></i>
+            </span>
+            <%= t key, scope: 'metrics' %>
+          </li>
+        <% end %>
+      </ol>
+    </div>
   </div>
-
-
-  <div class="bad-metrics">
-    <h2>The bad</h2>
-    <ol>
-      <% @user.bad_metrics.each_pair do |key, value| %>
-        <li>
-          <span class="icon-stack">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-metric-<%= key %> icon-light"></i>
-          </span>
-          <%= t key, scope: 'metrics' %>
-        </li>
-      <% end %>
-    </ol>
-  </div>
-</div>
 
 
 </div>
