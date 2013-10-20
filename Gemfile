@@ -14,7 +14,7 @@ gem 'bson_ext'
 gem 'therubyracer'
 gem 'twitter'
 
-gem 'sidekiq'
+gem 'sidekiq', :git => 'https://github.com/mperham/sidekiq.git'
 
 group :development, :test do
   gem 'guard-rspec', require: false
