@@ -26,4 +26,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'jasmine-rails'
   gem 'factory_girl'
+  gem 'delorean'
 end

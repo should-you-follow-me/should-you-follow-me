@@ -8,5 +8,5 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
   config.order = "random"
-  config.include DataStructures, example_group: { file_path: %r{spec/metrics} }
+  config.include Delorean
 end
