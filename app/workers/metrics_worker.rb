@@ -4,6 +4,8 @@ class MetricsWorker
   include Sidekiq::Worker
 
   def perform(twitter_screen_name)
+    return if User.where(twitter_screen_name: twitter_screen_name).first
+
     client = Twitter::Client.new(:consumer_key => 'uypAfO6IstkFRGfFm8Ux8A', :consumer_secret => 'xL0z5GPQGEs2613Eongw4iHVKDx14EjB9Zrg614vo')
 
     twitter_user = client.user twitter_screen_name
