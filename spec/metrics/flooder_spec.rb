@@ -10,8 +10,8 @@ describe 'Floader Metric' do
       Twitter::Tweet.new(id: 1, created_at: 'Mon Jul 16 09:59:01 +0000 2007'),
       Twitter::Tweet.new(id: 1, created_at: 'Mon Jul 16 08:59:01 +0000 2007')
     ]
-
     results = Metrics::FlooderMetric.run tweets
+
     expect(results).to eql({ flooder: -10 })
   end
 
@@ -23,8 +23,8 @@ describe 'Floader Metric' do
       Twitter::Tweet.new(id: 1, created_at: 'Sun Jul 15 10:59:01 +0000 2007'),
       Twitter::Tweet.new(id: 1, created_at: 'Sun Jul 15 09:59:01 +0000 2007')
     ]
-
     results = Metrics::FlooderMetric.run tweets
+
     expect(results).to be_nil
   end
 end
