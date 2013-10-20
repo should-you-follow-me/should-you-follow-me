@@ -14,6 +14,7 @@ gem 'bson_ext'
 gem 'therubyracer'
 gem 'twitter'
 
+# using mastery sidekiq for Capistrano V3 support
 gem 'sidekiq', :git => 'https://github.com/mperham/sidekiq.git'
 
 group :development, :test do
