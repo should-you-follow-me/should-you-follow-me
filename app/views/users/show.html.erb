@@ -22,7 +22,7 @@
           <%= t key, scope: 'metrics' %>
           <span class="icon-stack">
             <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-star icon-light"></i>
+            <i class="icon-metric-<%= key %> icon-light"></i>
           </span>
         </li>
       <% end %>
@@ -37,7 +37,7 @@
         <li>
           <span class="icon-stack">
             <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-star icon-light"></i>
+            <i class="icon-metric-<%= key %> icon-light"></i>
           </span>
           <%= t key, scope: 'metrics' %>
         </li>
