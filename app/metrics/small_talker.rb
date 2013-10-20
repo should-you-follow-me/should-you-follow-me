@@ -5,7 +5,8 @@ module Metrics
       'good morning',
       'good evening',
       'good night',
-      'good friday'
+      'good friday',
+      'going to sleep'
     ]
 
     def self.run(tweets)
