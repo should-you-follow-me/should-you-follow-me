@@ -14,6 +14,8 @@ gem 'bson_ext'
 gem 'therubyracer'
 gem 'twitter'
 
+gem 'sidekiq'
+
 group :development, :test do
   gem 'guard-rspec', require: false
   gem 'capistrano'
