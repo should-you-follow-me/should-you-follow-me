@@ -1,0 +1,22 @@
+#twitter-search-box {
+  margin-top: 200px;
+  @include grid-column($columns:4, $center:true, $collapse:true);
+
+.twitter-search {
+
+  span.twitter-at {
+    @include grid-column($columns:1,$float:left);
+    @include prefix;
+  }
+
+  input[type="text"].twitter-screen-name {
+    @include grid-column($columns:9);
+  }
+
+  input[type="submit"] {
+    @include grid-column($columns:2);
+    @include button($is-input:true);
+    @include button-size($button-sml, false, true);
+  }
+}
+}
