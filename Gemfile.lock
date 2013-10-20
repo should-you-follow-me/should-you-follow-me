@@ -61,6 +61,7 @@ GEM
       capistrano
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    chronic (0.10.2)
     chunky_png (1.2.9)
     coderay (1.0.9)
     compass (0.12.2)
@@ -70,6 +71,8 @@ GEM
     compass-rails (2.0.alpha.0)
       compass (>= 0.12.2, < 0.14)
     connection_pool (1.1.0)
+    delorean (2.1.0)
+      chronic
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -225,6 +228,7 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   compass-rails (~> 2.0.alpha.0)
+  delorean
   factory_girl
   font-awesome-rails
   guard-rspec
