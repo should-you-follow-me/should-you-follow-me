@@ -1,22 +1,24 @@
 <div id="content">
   <div class="search-bar">
     <span class="twitter-at">@</span>
-    <input class="twitter-screen-name" placeholder="Twitter user name"></input>
+    <input class="twitter-screen-name" placeholder="twitter user name"></input>
   </div>
-
 
   <div id="profile">
     <img class="picture" src="<%= @user.twitter_picture_url %>">
-    <h1 class="screen-name">@<%= @user.twitter_screen_name %></h1>
 
+    <div id="profile-content">
+      <% if @user.should_you_follow_me %>
+        <p class="should-be-followed">YES</p>
+      <% else %>
+        <p class="should-not-be-followed">NO</p>
+      <% end %>
+
+      <h1 class="screen-name">
+        <span class="twitter-at">@</span><%= @user.twitter_screen_name %>
+      </h1>
+    </div>
   </div>
-
-<!--   <% if @user.should_you_follow_me %>
-    <p class="should-be-followed">YES</p>
-  <% else %>
-    <p class="should-not-be-followed">NO</p>
-  <% end %>
- -->
 
 <div class="metrics">
   <div class="good-metrics">
@@ -52,6 +54,6 @@
 
 </div>
 <div id="score-bg">
-  <div class="good"></div>
   <div class="bad"></div>
+  <div class="good"></div>
 </div>
