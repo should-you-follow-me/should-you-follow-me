@@ -1,4 +1,6 @@
- describe 'Metrics Behaviour' do
+require 'spec_helper'
+
+describe 'Metrics Behaviour' do
    it 'Should only return one occurrence of the metric score when more than one tweet match the criteria' do
     tweets = [
       Twitter::Tweet.new(id: 1, entities: { 

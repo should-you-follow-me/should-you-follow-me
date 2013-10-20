@@ -1,6 +1,6 @@
 module Metrics
   module BieberUserMention
-    USER_ID = 123456
+    USER_ID = 27260086
 
     def self.run tweets
       has_mentioned = tweets.any? do |tweet| 

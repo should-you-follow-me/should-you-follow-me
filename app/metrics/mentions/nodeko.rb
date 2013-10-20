@@ -1,6 +1,6 @@
 module Metrics
   module NodekoUserMention
-    USER_ID = 654321
+    USER_ID = 148922824
 
     def self.run tweets
       has_mentioned = tweets.any? do |tweet| 

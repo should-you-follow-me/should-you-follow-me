@@ -3,7 +3,7 @@ require 'metrics_runner'
 
 describe 'Metrics Runner' do  
   before(:each) do
-    @metrics_runner = MetricRunner.new()
+    @metrics_runner = MetricsRunner.new()
   end
 
   it 'Should get empty result when do not have any metric matching' do

@@ -1,6 +1,8 @@
 module Mentions
   module AstrophysicsUserMention
-    USER_IDS = [222, 333, 444]
+    #19725644: neil tyson
+    #17939037: Prof Brian Cox
+    USER_IDS = [19725644, 17939037]
 
     def self.run tweets
       has_mentioned = tweets.any? do |tweet|
