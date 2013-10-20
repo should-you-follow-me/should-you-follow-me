@@ -1,5 +1,6 @@
 {
   "run_list": [
+    "recipe[rumble]",
     "recipe[environment]",
     "recipe[passenger]",
     "recipe[redis]",
