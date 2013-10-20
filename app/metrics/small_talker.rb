@@ -1,5 +1,5 @@
 module Metrics
-  module SmallTalk
+  module SmallTalker
     SMALL_TALKS = [
       'good day',
       'good morning',
@@ -9,12 +9,12 @@ module Metrics
     ]
 
     def self.run(tweets)
-      { small_talk: -10 } if small_talked?(tweets)
+      { small_talk: -10 } if has_small_talked?(tweets)
     end
 
     private
 
-    def self.small_talked?(tweets)
+    def self.has_small_talked?(tweets)
       tweets.any? do |tweet|
         SMALL_TALKS.any? { |small_talk| contains_small_talk? tweet, small_talk }
       end
