@@ -3,7 +3,7 @@ require 'small_talker'
 
 describe 'User small talker metrics' do
   context 'When tweets about any small talker' do
-    describe 'Should result a score of -10 when tweets contains:' do
+    describe 'Should result a score of -10 when tweets a small talk:' do
       it 'Good day' do
         tweets = [Twitter::Tweet.new(id: 5, text: "Good Day")]
         results = Metrics::SmallTalker.run tweets
@@ -37,6 +37,14 @@ describe 'User small talker metrics' do
         results = Metrics::SmallTalker.run tweets
 
         expect(results).to eql({ small_talk: -10  })
+      end
+    end
+    describe 'Should not result any score when not tweets a small talk:' do
+      it 'Good day everybody, today is amazing day outside' do
+        tweets = [Twitter::Tweet.new(id: 5, text: "Good day everybody, today is amazing day outside")]
+        results = Metrics::SmallTalker.run tweets
+
+        expect(results).to be_nil
       end
     end
   end

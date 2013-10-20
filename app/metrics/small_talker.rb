@@ -16,12 +16,12 @@ module Metrics
 
     def self.has_small_talked?(tweets)
       tweets.any? do |tweet|
-        SMALL_TALKS.any? { |small_talk| contains_small_talk? tweet, small_talk }
+        SMALL_TALKS.any? { |small_talk| is_small_talk? tweet, small_talk }
       end
     end
 
-    def self.contains_small_talk?(tweet, small_talk)
-        /#{small_talk}/i.match(tweet.full_text)
+    def self.is_small_talk?(tweet, small_talk)
+        /^#{small_talk}$/i.match(tweet.full_text)
     end
   end
 end
