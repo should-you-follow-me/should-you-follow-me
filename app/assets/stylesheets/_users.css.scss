@@ -56,6 +56,7 @@
 
 #profile {
   background: #fff;
+  margin-bottom: 10px;
 
   .picture {
     @include border-radius(200px);
@@ -124,3 +125,8 @@
   @include icon-stack($width: 2em, $height: 2em, $top-font-size: 1em, $base-font-size: 2em);
 }
 
+/* Icons Metric
+==================*/
+.icon-metric-bieber { @extend .icon-heart; }
+.icon-metric-small_talk { @extend .icon-comment; @extend .icon-flip-horizontal;}
+.icon-metric-astrophysics { @extend .icon-star; }

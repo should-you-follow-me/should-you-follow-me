@@ -20,39 +20,38 @@
     </div>
   </div>
 
-<div class="metrics">
-  <div class="good-metrics">
-    <ol>
-      <% @user.good_metrics.each_pair do |key, value| %>
-        <li>
-          <%= t key, scope: 'metrics' %>
-          <span class="icon-stack">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-star icon-light"></i>
-          </span>
-        </li>
-      <% end %>
-    </ol>
-  </div>
+  <div class="metrics">
+    <div class="good-metrics">
+      <ol>
+        <% @user.good_metrics.each_pair do |key, value| %>
+          <li>
+            <%= t key, scope: 'metrics' %>
+            <span class="icon-stack">
+              <i class="icon-circle icon-stack-base"></i>
+              <i class="icon-metric-<%= key %> icon-light"></i>
+            </span>
+          </li>
+        <% end %>
+      </ol>
+    </div>
 
 
-  <div class="bad-metrics">
-    <ol>
-      <% @user.bad_metrics.each_pair do |key, value| %>
-        <li>
-          <span class="icon-stack">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-star icon-light"></i>
-          </span>
-          <%= t key, scope: 'metrics' %>
-        </li>
-      <% end %>
-    </ol>
+    <div class="bad-metrics">
+      <ol>
+        <% @user.bad_metrics.each_pair do |key, value| %>
+          <li>
+            <span class="icon-stack">
+              <i class="icon-circle icon-stack-base"></i>
+              <i class="icon-metric-<%= key %> icon-light"></i>
+            </span>
+            <%= t key, scope: 'metrics' %>
+          </li>
+        <% end %>
+      </ol>
+    </div>
   </div>
 </div>
 
-
-</div>
 <div id="score-bg">
   <div class="bad"></div>
   <div class="good"></div>
