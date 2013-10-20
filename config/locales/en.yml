@@ -28,3 +28,6 @@ en:
     small_talker: 'Small talker'
     nodeko: 'Node Knockouter'
     flooder: 'Flooder'
+    status_java: 'Java Fan'
+    status_ruby_rails: 'Ruby Fan'
+    status_javascript: 'Javascript Fan'
