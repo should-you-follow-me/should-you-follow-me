@@ -1,4 +1,4 @@
-module Mentions
+module Metrics
   module AstrophysicsUserMention
     #19725644: neil tyson
     #17939037: Prof Brian Cox
