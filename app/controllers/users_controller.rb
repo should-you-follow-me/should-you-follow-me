@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
     unless @user
       MetricsWorker.perform_async twitter_screen_name
+      render 'analysing'
     end
   end
 end

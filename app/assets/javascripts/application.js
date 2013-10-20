@@ -15,4 +15,10 @@
 //= require foundation
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){
+  $('.twitter-search').submit(function (event) {
+    event.preventDefault();
+
+    window.location.href = '/' + $('.twitter-screen-name').val();
+  });
+});
