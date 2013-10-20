@@ -1,4 +1,6 @@
-class MetricRunner
+Dir["./app/metrics/mentions/*.rb"].each { |file| require file }
+
+class MetricsRunner
   def run(tweets)
     @scores = {}
 
