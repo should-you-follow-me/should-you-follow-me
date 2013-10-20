@@ -2,6 +2,7 @@
   "run_list": [
     "recipe[environment]",
     "recipe[passenger]",
+    "recipe[redis]",
     "recipe[mongodb]",
     "recipe[application]"
   ]

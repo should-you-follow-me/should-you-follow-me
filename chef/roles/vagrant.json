@@ -5,6 +5,7 @@
     "recipe[apt]",
     "recipe[environment]",
     "recipe[ruby]",
-    "recipe[mongodb]"
+    "recipe[mongodb]",
+    "recipe[redis]"
   ]
 }
