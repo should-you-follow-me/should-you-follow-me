@@ -1,13 +1,12 @@
 require 'spec_helper'
-Dir["./app/metrics/mentions/*.rb"].each { |file| require file }
 
 describe 'User mentions metrics' do
   context 'When mention someone which decreases your score' do
     it 'Should result a score of -10 when mentioned Justin Bieber' do
       tweets = [
-        Twitter::Tweet.new(id: 1, entities: { 
+        Twitter::Tweet.new(id: 1, entities: {
           user_mentions: [
-              { id: 1 }, 
+              { id: 1 },
               { id: Metrics::BieberUserMention::USER_ID }
           ]
         })
@@ -15,23 +14,23 @@ describe 'User mentions metrics' do
 
       results = Metrics::BieberUserMention.run tweets
       expect(results).to eql({ bieber: -10 })
-    end   
+    end
 
     it 'Should not return bieber metric score when not mentioned Justin Bieber' do
       tweets = [Twitter::Tweet.new(id: 1, entities: { user_mentions: [{ id: 1 }] })]
 
       results = Metrics::BieberUserMention.run tweets
       expect(results).to be_nil
-    end   
+    end
 
   end
 
   context 'When mention someone which increases your score' do
     it 'Should result a score of +10 when mention Node Knockout' do
       tweets = [
-        Twitter::Tweet.new(id: 1, entities: { 
+        Twitter::Tweet.new(id: 1, entities: {
           user_mentions: [
-              { id: 1 }, 
+              { id: 1 },
               { id: Metrics::NodekoUserMention::USER_ID }
           ]
         })
@@ -50,9 +49,9 @@ describe 'User mentions metrics' do
 
     it 'Should result a score of 10 when any astrophysic of the list has been mentioned' do
       tweets = [
-        Twitter::Tweet.new(id: 1, entities: { 
+        Twitter::Tweet.new(id: 1, entities: {
           user_mentions: [
-              { id: 1 }, 
+              { id: 1 },
               { id: Metrics::AstrophysicsUserMention::USER_IDS[0] }
           ]
         })
